@@ -386,3 +386,18 @@ SELECT name, MAX(marks)
 FROM student
 WHERE city = "Rajshahi";
 
+--  Views. Views create a new table and copy from another table, it's table or relation included only necessary column or attrubute not a unnecessary column or attribute 
+CREATE VIEW view1 AS 
+SELECT name, rollno, marks FROM student;
+
+SELECT * FROM view1;
+
+SELECT AVG(mark) 
+FROM view1;
+
+SELECT * 
+FROM view1
+WHERE mark > 80;
+
+--  Delete view table
+DROP TABLE view1;
